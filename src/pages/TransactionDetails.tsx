@@ -21,7 +21,7 @@ const TransactionDetailsPage = (): JSX.Element => {
   );
 
   // set card border color according to transaction processed or not
-  const setCardBorderColor = () => {
+  const setCardBorderColor = (): string => {
     if (TRANSACTION_DATA?.transaction_processed) {
       return "success";
     }
@@ -29,7 +29,7 @@ const TransactionDetailsPage = (): JSX.Element => {
     return "danger";
   };
 
-  const setTransactionStatus = () => {
+  const setTransactionStatus = (): string => {
     if (TRANSACTION_DATA?.transaction_processed) {
       return "Transaction Successful";
     }

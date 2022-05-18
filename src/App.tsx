@@ -7,7 +7,7 @@ import TransactionListingPage from "./pages/TransactionListing";
 import styled from "styled-components";
 import { AppContextProvider } from "./contexts/AppContext";
 
-function App() {
+const App = (): JSX.Element => {
   return (
     <AppContextProvider>
       <Container>
@@ -26,7 +26,7 @@ function App() {
       </Container>
     </AppContextProvider>
   );
-}
+};
 
 const Container = styled.div`
   display: flex;

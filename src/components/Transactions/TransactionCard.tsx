@@ -16,12 +16,12 @@ const TransactionCard = ({ transactionData }: TProps): JSX.Element => {
   const navigate = useNavigate();
 
   // navigate to transaction details page
-  const openTransactionListingPage = () => {
+  const openTransactionListingPage = (): void => {
     navigate(`transaction/${transactionData.id}`);
   };
 
   // set card border color according to transaction processed or not
-  const setCardBorderColor = () => {
+  const setCardBorderColor = (): string => {
     if (transactionData.transaction_processed) {
       return "success";
     }

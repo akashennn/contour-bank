@@ -14,7 +14,7 @@ const AccountCard = ({ accountData }: TProps): JSX.Element => {
   const navigate = useNavigate();
 
   // navigate to transaction listing page
-  const openTransactionListingPage = () => {
+  const openTransactionListingPage = (): void => {
     navigate(`account/${accountData.id}`);
   };
 
