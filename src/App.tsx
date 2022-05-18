@@ -13,8 +13,14 @@ function App() {
       <Container>
         <Routes>
           <Route path="/" element={<AccountListingPage />} />
-          <Route path="transactions" element={<TransactionListingPage />} />
-          <Route path="transactions/:id" element={<TransactionDetailsPage />} />
+          <Route
+            path="account/:accountId"
+            element={<TransactionListingPage />}
+          />
+          <Route
+            path="account/:accountId/transaction/:transactionId"
+            element={<TransactionDetailsPage />}
+          />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Container>

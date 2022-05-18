@@ -15,11 +15,11 @@ const AccountCard = ({ accountData }: TProps): JSX.Element => {
 
   // navigate to transaction listing page
   const openTransactionListingPage = () => {
-    navigate("transactions");
+    navigate(`account/${accountData.id}`);
   };
 
   return (
-    <Card key={accountData.id} onClick={openTransactionListingPage}>
+    <Card onClick={openTransactionListingPage}>
       <Card.Body>
         <CardBodyRow>
           <Card.Title>{accountData.account_name}</Card.Title>
