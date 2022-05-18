@@ -12,7 +12,7 @@ const AccountListingPage = (): JSX.Element => {
     <Container>
       <Row xs={1} md={2} className="g-4">
         {accountsData.map((accountData) => (
-          <Col>
+          <Col key={accountData.id}>
             <AccountCard accountData={accountData} />
           </Col>
         ))}
