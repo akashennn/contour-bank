@@ -13,3 +13,8 @@ body {
   width: 1024px;
   height: 100%;
 }
+
+/* bootstrap overrides */
+.card-footer {
+  background-color: unset;
+}
