@@ -25,6 +25,7 @@ function App() {
 const Container = styled.div`
   display: flex;
   flex: 1;
+  margin: 20px;
 `;
 
 export default App;
