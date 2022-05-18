@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "account_name": "Securities Settlement Account",
+    "account_name": "Securities Account",
     "account_type": "settlement",
     "balance": 0,
     "currency": "SGD",
