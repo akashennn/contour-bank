@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import AccountListingPage from "./pages/AccountListing";
+import ErrorPage from "./pages/_Error";
+import TransactionDetailsPage from "./pages/TransactionDetails";
+import TransactionListingPage from "./pages/TransactionListing";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<AccountListingPage />} />
+      <Route path="transactions" element={<TransactionListingPage />} />
+      <Route path="transactions/:id" element={<TransactionDetailsPage />} />
+      <Route path="*" element={<ErrorPage />} />
+    </Routes>
   );
 }
 
