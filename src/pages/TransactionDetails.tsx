@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Card } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { AppContext } from "../contexts/AppContext";
+import TransactionStatus from "../components/Transactions/TransactionStatus";
 
 const TransactionDetailsPage = (): JSX.Element => {
   // ctx
@@ -29,14 +30,6 @@ const TransactionDetailsPage = (): JSX.Element => {
     return "danger";
   };
 
-  const setTransactionStatus = (): string => {
-    if (TRANSACTION_DATA?.transaction_processed) {
-      return "Transaction Successful";
-    }
-
-    return "Transaction Failed";
-  };
-
   return (
     <Container>
       <Card className="card" border={setCardBorderColor()}>
@@ -51,7 +44,9 @@ const TransactionDetailsPage = (): JSX.Element => {
           <CardFooterRow>
             {TRANSACTION_DATA?.transaction_date}
 
-            <Card.Text>{setTransactionStatus()}</Card.Text>
+            <TransactionStatus
+              transactionProcessed={TRANSACTION_DATA?.transaction_processed}
+            />
           </CardFooterRow>
         </Card.Footer>
       </Card>

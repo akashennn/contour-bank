@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import ACCOUNTS_DATA from "../assets/mockdata/accounts.json";
 import TRANSACTIONS_DATA_FROM_ACCOUNT1 from "../assets/mockdata/transactions-1.json";
 import TRANSACTIONS_DATA_FROM_ACCOUNT2 from "../assets/mockdata/transactions-2.json";
