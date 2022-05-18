@@ -38,8 +38,17 @@ const AccountCard = ({ accountData }: TProps): JSX.Element => {
 const CardBodyRow = styled.div`
   display: flex;
   flex: 1;
-  justify-content: space-between;
-  align-items: center;
+
+  @media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 767px) {
+    /* phones */
+    flex-direction: column;
+  }
 `;
 
 export default AccountCard;

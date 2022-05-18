@@ -18,3 +18,20 @@ body {
 .card-footer {
   background-color: unset;
 }
+
+@media only screen and (min-width: 768px) {
+  /* tablets and desktop */
+}
+
+@media only screen and (max-width: 767px) {
+  /* phones */
+  .card-header,
+  .card-body,
+  .card-footer {
+    text-align: center;
+  }
+
+  .badge {
+    display: none;
+  }
+}

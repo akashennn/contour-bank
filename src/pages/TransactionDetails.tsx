@@ -74,12 +74,6 @@ const Container = styled.div`
     @media only screen and (max-width: 767px) {
       /* phones */
       width: 18rem;
-
-      .card-header,
-      .card-body,
-      .card-footer {
-        text-align: center;
-      }
     }
   }
 `;
