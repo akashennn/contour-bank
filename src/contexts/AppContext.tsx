@@ -26,6 +26,7 @@ export const AppContextProvider = ({ children }: TProps): JSX.Element => {
   const [accountsData, setAccountsData] = useState<TAccount[]>([]);
   const [transactionsData, setTransactionsData] = useState<TTransaction[]>([]);
 
+  // set initial data with all accounts
   useEffect(() => {
     setAccountsData(ACCOUNTS_DATA);
     setTransactionsData([
