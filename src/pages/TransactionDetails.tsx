@@ -29,6 +29,14 @@ const TransactionDetailsPage = (): JSX.Element => {
     return "danger";
   };
 
+  const setTransactionStatus = () => {
+    if (TRANSACTION_DATA?.transaction_processed) {
+      return "Transaction Successful";
+    }
+
+    return "Transaction Failed";
+  };
+
   return (
     <Container>
       <Card className="card" border={setCardBorderColor()}>
@@ -43,11 +51,7 @@ const TransactionDetailsPage = (): JSX.Element => {
           <CardFooterRow>
             {TRANSACTION_DATA?.transaction_date}
 
-            <Card.Text>
-              {TRANSACTION_DATA?.transaction_processed
-                ? "Transaction Processed"
-                : "Transaction Not Processed"}
-            </Card.Text>
+            <Card.Text>{setTransactionStatus()}</Card.Text>
           </CardFooterRow>
         </Card.Footer>
       </Card>
